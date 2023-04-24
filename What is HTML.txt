@@ -1,0 +1,37 @@
+What is HTML?
+
+It means Hypertext markup language that is used to create user inteface of any web application.
+
+it is interpretar based language that directly interpreted by browser.
+
+
+Hypertext means text within a tag. <html> </html>   <head></head> <body></body>
+
+markup means predefine text 
+
+basic Syntax Structure
+
+<!Doctype html>
+<html>
+<head>
+</head>
+<body>
+     <h1></h1>
+     ...
+     <h6></h6>
+
+    <p>sd gjhsgd hs gdhg shdg shdg </p>
+     <label>Enter username</label>
+    <div  style="width:400px;height:400px;">
+
+    </div>
+    <span>
+
+    </span>
+
+
+
+</body>
+</html>
+
+
