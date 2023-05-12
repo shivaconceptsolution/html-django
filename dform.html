@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+   <div style="float:left;">
+      <form action="" method="post">
+         {% csrf_token %}
+         <p>Basic Course</p>
+        {% for basic in basiccourse %} 
+           <input type="radio" value="{{basic}}" {% if basic == resbasic %} checked {% endif %}  name="basic" />{{basic}} <br>
+        {% endfor %}
+        <p>Advance Course</p>
+        {% for advance in advancecourse %} 
+          {% if advance in resadvance %}
+          <input type="checkbox" value="{{advance}}" name="advance" checked  />{{advance}}
+          {% else %} 
+          <input type="checkbox" value="{{advance}}"  name="advance" />{{advance}}
+          {% endif %}
+          
+        {% endfor %}
+        <br>
+        <p>Cloud Course</p>
+        <select name="cloudcourse">
+        {% for cloud in cloudcourse %} 
+          
+           <option value="{{cloud}}"  {% if cloud == rescloudcourse %} selected {% endif %} />{{cloud}} </option>
+        {% endfor %}
+    </select>
+    <br>
+    <p> Course Fee</p>
+   
+    <select name="completecourse" multiple>
+    {% for key,value in coursefee.items %} 
+  
+    {% if key in rescoursefee %}
+    <option value="{{key}}" selected />{{key}},{{value}} </option>
+    {% else %} 
+    <option value="{{key}}" />{{key}},{{value}} </option>
+    {% endif %}
+      
+    {% endfor %}
+    </select>
+    <br>
+    <input type="submit" name="btnsubmit" value="Click" />
+    </form>
+   </div>
+   <div style="float:right;">
+      {% if resbasic %}
+      <p>Basic Course is {{resbasic}}</p>
+      {% endif %}
+      {% if resadvance %}
+       {%  for data in resadvance %}
+       <p>Advance Course are {{data}}</p>
+       {% endfor  %}
+      {% endif %}
+      {% if rescloudcourse %}
+      <p>Cloud Course is {{rescloudcourse}}</p>
+      {% endif %}
+      {% if rescoursefee %}
+      {%  for data in rescoursefee %}
+      <p>Course Fee are {{data}}</p>
+      {% endfor  %}
+     {% endif %}
+   </div>
+   
+</body>
+</html>
