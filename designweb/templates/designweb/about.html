@@ -1,0 +1,18 @@
+{% extends 'designweb/layout.html' %}
+{% block childcontent %}
+<div style="clear:both;">
+</div>
+<div style="float:left;width:59%;">
+    <img src="/static/images/react.png" width="400" height="400" />
+</div>
+<div style="float:right;width:40%;">
+    <h1>Welcome in ABOUT US PAGE</h1>
+
+    {% for res1 in res %}
+     <p> {{res1.username}} , {{res1.password}}</p>
+    {%  endfor %}
+</div>
+
+{% endblock %}
+
+   
