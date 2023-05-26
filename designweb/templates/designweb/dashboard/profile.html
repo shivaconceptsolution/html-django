@@ -1,0 +1,25 @@
+{% extends 'designweb/layout.html' %}
+{% block childcontent %}
+<div style="clear:both;">
+</div>
+<div style="float:left;width:20%;">
+   
+</div>
+<div style="float:right;width:80%;">
+    <h1>Welcome in Profile PAGE</h1>
+    <table border="1" style="font-size: 25px;">
+        <tr><th>Username</th><th>Password</th><th>Email</th><th>Mobile</th><th>Edit Operation</th><th>Delete Operation</th></tr>
+        
+        {% for res1 in res %}
+        <tr><td> {{res1.username}}</td><td> {{res1.password}}</td><td> {{res1.email}}</td><td> {{res1.mobile}}</td>
+        <td><a href="editprofile">Edit</a></td><td><a href="deleteprofile">Delete</a></td>
+        </tr>
+        {%  endfor %}
+        
+    </table>
+    
+</div>
+
+{% endblock %}
+
+   

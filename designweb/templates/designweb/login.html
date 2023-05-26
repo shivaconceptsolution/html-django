@@ -6,20 +6,17 @@
     <img src="/static/images/1671623355147.jpg" width="400" height="300" />
 </div>
 <div style="float:right;margin-right: 100px;">
-    <h3>New User Sign up here</h3>
+    <h3>New User Sign in here</h3>
     <form action="" method="post">
         {% csrf_token %}
        <input type="text" placeholder="username" name="txtuser" required />
        <br><br>
        <input type="password" placeholder="password" name="txtpass" required  />
        <br><br>
-       <input type="email" placeholder="email" name="txtemail"  required />
-       <br><br>
-       <input type="text" placeholder="mobile" name="txtmobile" required />
-       <br><br>
+       
        <input type="submit" name="btnsubmit" value="Submit" />
     </form>
-    {{key}}
+    {{res}}
 </div>
 
 
