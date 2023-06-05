@@ -1,0 +1,19 @@
+{% extends 'designweb/layout.html' %}
+{% block childcontent %}
+    <h1>Are you sure to delete this record</h1>
+ 
+    <form action="" method="post">
+        {% csrf_token %}
+       
+        <label>Username:</label>   {{res.username}}
+        <br><br>
+        <label>Password:</label>   {{res.password}}
+        <br><br>
+        <label>Email:</label>      {{res.email}}
+        <br><br>
+        <label>Mobile:</label>     {{res.mobile}}
+        <br><br>
+        <input type="submit" name="btnsubmit" value="delete" />
+        <a href="/designweb/profile" />Cancel</a>
+     </form>
+     {% endblock %}

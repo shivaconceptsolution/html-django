@@ -19,7 +19,11 @@
         <li><a href="/designweb/services">Services</a></li>
         <li><a href="/designweb/contacts">Contact us</a></li>
         <li><a href="/designweb/gallery">Gallery</a></li>
+        {% if sessionkey  %}
+        <li><a href="/designweb/logout">Logout</a></li>
+        {% else %}
         <li><a href="/designweb/login">Login</a></li>
+        {% endif %}
      </ul>
      </div>
     </div>

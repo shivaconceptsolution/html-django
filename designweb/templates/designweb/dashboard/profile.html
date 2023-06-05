@@ -12,7 +12,7 @@
         
         {% for res1 in res %}
         <tr><td> {{res1.username}}</td><td> {{res1.password}}</td><td> {{res1.email}}</td><td> {{res1.mobile}}</td>
-        <td><a href="editprofile">Edit</a></td><td><a href="deleteprofile">Delete</a></td>
+        <td><a href="editprofile?q={{res1.id}}">Edit</a></td><td><a href="deleteprofile?q={{res1.id}}">Delete</a></td>
         </tr>
         {%  endfor %}
         

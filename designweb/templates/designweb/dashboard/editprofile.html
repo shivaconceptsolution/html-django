@@ -1,0 +1,18 @@
+{% extends 'designweb/layout.html' %}
+{% block childcontent %}
+    <h1>Edit Registration Table Record</h1>
+    <form action="" method="post">
+       {% csrf_token %}
+       <table>
+      <tr><td><label>Username:</label></td><td> <input type="text" name="txtuname" value="{{res.username}}"  /></td></tr> 
+      <tr><td><label>Password:</label></td><td> <input type="text" name="txtpass" value="{{res.password}}"  /></td></tr>
+      <tr><td><label>Email:</label></td><td> <input type="text" name="txtemail" value="{{res.email}}"  /></td></tr>
+      <tr><td><label>Mobile:</label></td><td> <input type="text" name="txtmobile" value="{{res.mobile}}"  /></td></tr>
+      <tr><td></td><td><input type="submit" name="btnsubmit" value="Update" /></td></tr>
+      </table>
+       
+       
+       
+    </table>
+    </form>
+    {% endblock %}
