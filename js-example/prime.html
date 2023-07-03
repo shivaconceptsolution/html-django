@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function chkprime()
+{
+    var num = document.getElementById("txtnum1").value;
+    
+    var s='Prime';
+    for(var i=2;i<num;i++)
+    {
+        if(num%i==0)
+        {
+            s = 'Not Prime';
+            break;
+        }
+    }
+    document.getElementById("result").innerHTML=s;
+    
+
+}
+    </script>
+</head>
+<body>
+    <input type="text" id="txtnum1" placeholder="Enter First Number"  />
+<br><br>
+
+<input type="button" value="Check Prime"  onclick="chkprime()"   />
+<br>
+<div id="result">
+
+</div>
+</body>
+</html>

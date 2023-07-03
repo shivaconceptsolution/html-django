@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       var s="c,c++,java,php,c,android,ios,java,python,c,flutter,java";
+       var arr = s.split(",");
+       var c=0;
+       for(i=0;i<arr.length;i++)
+       {
+        for(k=0;k<i;k++)
+        {
+            if(arr[i]==arr[k])
+            {
+                c++;
+                break;
+            }
+        }
+        if(c==0)
+        {
+        for(j=i+1;j<arr.length;j++)
+        {
+             if(arr[i]==arr[j])
+                {
+                   document.write(arr[i] + "<br>");
+                   break;
+                }
+        }
+       }
+       }
+
+    </script>
+</body>
+</html>

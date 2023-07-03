@@ -1,0 +1,35 @@
+<html>
+<head>
+<script>
+function add()
+{
+    var num1 = document.getElementById("txtnum1").value;
+    var num2 = document.getElementById("txtnum2").value;
+    var s='';
+    if(parseInt(num1)>parseInt( num2))
+    {
+        s =  'Num1 is greater';
+    }
+    else
+    {
+        s = 'Num2 is greater';
+    }
+    document.getElementById("result").innerHTML=s;
+    
+
+}
+</script>
+</head>
+<body>
+<input type="text" id="txtnum1" placeholder="Enter First Number"  />
+<br><br>
+<input type="text" id="txtnum2" placeholder="Enter Second Number"  />
+<br><br>
+<input type="button" value="Check Greater"  onclick="add()"   />
+<br>
+<div id="result">
+
+</div>
+
+</body>
+</html>
